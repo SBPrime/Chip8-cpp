@@ -31,7 +31,6 @@
 #include <signal.h>
 
 #include <SDL.h>
-#include <curses.h>
 
 #include "chip8.h"
 #include "test.h"
@@ -62,7 +61,7 @@ bool isRunning = true;
 static void handleSDLEvent(SDL_Event *e) {
     switch (e->type) {
         case SDL_QUIT:
-            isRunning = FALSE;
+            isRunning = false;
             break;
         case SDL_KEYUP:
         case SDL_KEYDOWN:
@@ -175,7 +174,7 @@ void cpuLoop() {
  * This method is called when a exit signal is send
  */
 static void onExit() {
-    isRunning = FALSE;
+    isRunning = false;
 }
 
 static void fillAudio(void *udata, Uint8 *stream, int len) {
