@@ -337,7 +337,7 @@ void CChip8::moveUp(uint8_t lines) {
 void CChip8::moveLeft() {
     uint8_t* ptr1 = &m_screen[4];
     uint8_t* ptr2 = m_screen;
-    uint8_t* ptr3 = &m_screen[S_SCREEN_W - 5];
+    uint8_t* ptr3 = &m_screen[S_SCREEN_W - 4];
 
     for (int y = 0; y < S_SCREEN_H; y++) {
         memmove(ptr2, ptr1, S_SCREEN_W - 4);
